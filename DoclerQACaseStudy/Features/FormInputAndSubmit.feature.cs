@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UnitTestProject3.Features
+namespace DoclerQACaseStudy.Features
 {
     using TechTalk.SpecFlow;
     

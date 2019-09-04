@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UnitTestProject3.Features
+namespace DoclerQACaseStudy.Features
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,20 @@ namespace UnitTestProject3.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Title")]
-    public partial class TitleFeature
+    [NUnit.Framework.DescriptionAttribute("Company Logo")]
+    public partial class CompanyLogoFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Title.feature"
+#line 1 "CompanyLogo.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Title", "\tCheck if the title is \"UI Testing Site\" on every site", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Company Logo", "\tCheck if the company logo is on every site", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,20 +70,20 @@ namespace UnitTestProject3.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Verify the title on every site")]
+        [NUnit.Framework.DescriptionAttribute("Verify the company logo on every site")]
         [NUnit.Framework.TestCaseAttribute("http://uitest.duodecadits.com/", null)]
         [NUnit.Framework.TestCaseAttribute("http://uitest.duodecadits.com/form.html", null)]
         [NUnit.Framework.TestCaseAttribute("http://uitest.duodecadits.com/error", null)]
-        public virtual void VerifyTheTitleOnEverySite(string page, string[] exampleTags)
+        public virtual void VerifyTheCompanyLogoOnEverySite(string page, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the title on every site", null, exampleTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Verify the company logo on every site", null, exampleTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
  testRunner.Given(string.Format("the web browser is at the {0}", page), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.Then("the page title is UI Testing Site", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("there is a company logo image", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

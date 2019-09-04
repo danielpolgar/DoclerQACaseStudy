@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace UnitTestProject3.Features
+namespace DoclerQACaseStudy.Features
 {
     using TechTalk.SpecFlow;
     
@@ -18,20 +18,21 @@ namespace UnitTestProject3.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.0.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("Error button")]
-    public partial class ErrorButtonFeature
+    [NUnit.Framework.DescriptionAttribute("Hello")]
+    public partial class HelloFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "ErrorButton.feature"
+#line 1 "Hello.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Error button", "\tCheck if the Error button gets a 404 HTTP response code", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Hello", "\tCheck if the browser redirects to the Hello Page and displays the name in the in" +
+                    "put box", ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -70,19 +71,26 @@ namespace UnitTestProject3.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Error button gets a 404 HTTP response code")]
-        public virtual void ErrorButtonGetsA404HTTPResponseCode()
+        [NUnit.Framework.DescriptionAttribute("Redirect to the Hello Page after submit the input text")]
+        [NUnit.Framework.TestCaseAttribute("John", "Hello John!", null)]
+        [NUnit.Framework.TestCaseAttribute("Sophia", "Hello Sophia!", null)]
+        [NUnit.Framework.TestCaseAttribute("Charlie", "Hello Charlie!", null)]
+        [NUnit.Framework.TestCaseAttribute("Emily", "Hello Emily!", null)]
+        [NUnit.Framework.TestCaseAttribute("Dániel", "Hello Dániel!", null)]
+        public virtual void RedirectToTheHelloPageAfterSubmitTheInputText(string value, string result, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Error button gets a 404 HTTP response code", null, ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Redirect to the Hello Page after submit the input text", null, exampleTags);
 #line 5
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 6
- testRunner.Given("a web browser is at the Home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("a web browser is at the Form page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 7
- testRunner.When("the user clicks on the Error button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("the user writes a {0} in the input box", value), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 8
- testRunner.Then("the page title contains Error", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("the user clicks on the submit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.Then(string.Format("the browser navigates to the Hello Page and displays the {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
